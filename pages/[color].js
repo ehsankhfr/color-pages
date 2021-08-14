@@ -8,6 +8,7 @@ export default function Color({ color }) {
 
 export async function getServerSideProps({ params }) {
   let color = params.color
+  console.log(123, color)
   return { props: { color } }
 }
 
