@@ -9,8 +9,9 @@ export default function Color({color}) {
 }
 
 export async function getServerSideProps({params}) {
+    const logger = new Logger('foo');
     let color = params.color
-    Logger.log(123, color)
+    logger.log(123, color)
     return {props: {color}}
 }
 
