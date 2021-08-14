@@ -1,3 +1,4 @@
+import { Logger } from 'aws-amplify';
 import colors from '../data/colors.json'
 
 export default function Color({ color }) {
@@ -8,7 +9,7 @@ export default function Color({ color }) {
 
 export async function getServerSideProps({ params }) {
   let color = params.color
-  console.log(123, color)
+  Logger.log(123, color)
   return { props: { color } }
 }
 
